@@ -3,13 +3,14 @@ import { link } from 'fs';
 import Image from 'next/image';
 import React from 'react';
 
+import koinx from '@/public/koinx.png';
 import { cn } from '@/utils/cn';
 import {
 	IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconClipboardCopy,
 	IconFileBroken, IconSignature, IconTableColumn
 } from '@tabler/icons-react';
 
-import selfImage from '../public/application.png';
+import blogPic from '../public/blogPic.png';
 import { BentoGrid, BentoGridItem } from './ui/bento-grid';
 
 export function BentoGridDemo() {
@@ -36,15 +37,16 @@ const items = [
 	{
 		title: "Blogging application",
 		description: "Exploring fast blogging experience with cloudflare.",
-		header: <Image src={selfImage} alt='test' className=' object-cover ' />,
+		header: <Image src={blogPic} alt='test' className=' object-cover ' />,
 		icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
 		link: "https://medium-frontend-gamma.vercel.app/"
 	},
 	{
-		title: "The Digital Revolution",
-		description: "Dive into the transformative power of technology.",
-		header: <Skeleton />,
+		title: "Koinx Challenge",
+		description: "A pixel perfect frontend challenge",
+		header: <Image src={koinx} alt='test' className=' object-cover ' />,
 		icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+		link: "https://koinx-black.vercel.app/"
 	},
 	{
 		title: "The Art of Design",
